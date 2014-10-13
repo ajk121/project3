@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
  */
+
+.nav{
+  max-width: 100%;
+  background-color: grey;
+  position: center;
+  font-size: 40px;
+  height: 77px;
+  /*position: fixed;*/
+}
+
+.nav li{
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+  text-align: right;
+  float: center;  
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  }
+
+.login{
+  float:right;
+}
+
+.body{
+  border: black;
+  border: solid;
+}

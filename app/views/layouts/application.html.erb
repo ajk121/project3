@@ -8,7 +8,25 @@
 </head>
 <body>
 
+<div class= "nav">
+<nav>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Profile", users_path %></li>
+  <li><%= link_to "Messages", messages_path %></li>
+  <li>Search</li>
+  <li><%= link_to "Events", events_path %></li>
+
+<div class="login"
+  <li>Login</li>
+  &nbsp;
+  <li>Logout</li>
+</div>
+</nav>
+</div>
+
+<div class="body">
 <%= yield %>
+</div>
 
 </body>
 </html>

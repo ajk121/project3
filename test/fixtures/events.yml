@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  date: 2014-10-13
+  creater_id: 1
+  attendee_id: 1
+
+two:
+  name: MyString
+  date: 2014-10-13
+  creater_id: 1
+  attendee_id: 1
