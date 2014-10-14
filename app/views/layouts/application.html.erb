@@ -8,24 +8,31 @@
 </head>
 <body>
 
-<div class= "nav">
-<nav>
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Profile", users_path %></li>
-  <li><%= link_to "Messages", messages_path %></li>
-  <li>Search</li>
-  <li><%= link_to "Events", events_path %></li>
+  <div class= "nav">
+    <nav>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Profile", users_path %></li>
+      <li><%= link_to "Messages", messages_path %></li>
+      <li>Search</li>
+      <li><%= link_to "Events", events_path %></li>
 
-<div class="login"
-  <li>Login</li>
-  &nbsp;
-  <li>Logout</li>
+      <div class='login'>
+      <% if current_user %>
+        <%= current_user.email %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path %> or 
+        <%= link_to "Sign In", new_user_session_path %>
+      <% end %>
+    </div>
+  </nav>
 </div>
-</nav>
-</div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <div class="body">
-<%= yield %>
+  <%= yield %>
 </div>
 
 </body>
