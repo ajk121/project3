@@ -7,7 +7,7 @@
   <%= f.text_field :name, autofocus: true %></div>
 
   <div><%= f.label :dob %><br />
-  <%= date_select("user", "dob") %></div>
+  <%= f.date_select("dob", start_year:1994) %></div>
 
   <div><%= f.label :house %><br />
   <%= f.text_field :house, autofocus: true %></div>
