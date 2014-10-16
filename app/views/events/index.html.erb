@@ -4,7 +4,6 @@
   <tr>
     <th>Name</th>
     <th>Date</th>
-    <th>Creater</th>
     <th>Attendee</th>
     <th></th>
     <th></th>
@@ -15,8 +14,6 @@
   <tr>
     <td><%= event.name %></td>
     <td><%= event.date %></td>
-    <td><%= event.creater_id %></td>
-    <td><%= event.attendee_id %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

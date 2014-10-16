@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>User Type</th>
     <th>Name</th>
     <th>House</th>
     <th>Email</th>
@@ -12,10 +13,13 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.role %></td>
     <td><%= user.name %></td>
     <td><%= user.house %></td>
     <td><%= user.email %></td>
@@ -26,6 +30,10 @@
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= (link_to 'Approve', user_approve_path(user), method: :put) unless user == current_user %></td>
+    <td><%= (link_to 'Decline', user_decline_path(user), method: :put) unless user == current_user %></td>
+
+
   </tr>
 <% end %>
 </table>

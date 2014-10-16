@@ -6,7 +6,10 @@ CareConnect::Application.routes.draw do
 
   resources :events
   resources :messages
-  resources :users
+  resources :users do 
+    put 'approve'
+    put 'decline'
+  end 
 
 
 

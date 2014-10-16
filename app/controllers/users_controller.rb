@@ -81,4 +81,30 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # PUT /users/1/approve
+  # PUT /users/1/approve.json
+  def approve
+    @user = User.find(params[:user_id])
+    @user.role = 'approved'
+    @user.save
+
+    respond_to do |format|
+      format.html { redirect_to users_path }
+      format.json { render json: @user }
+    end
+  end
+
+  # PUT /users/1/decline
+  # PUT /users/1/decline.json
+  def decline
+    @user = User.find(params[:user_id])
+    @user.role = 'declined'
+    @user.save
+
+    respond_to do |format|
+      format.html { redirect_to users_path }
+      format.json { render json: @user }
+    end
+  end
 end
