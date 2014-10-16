@@ -107,4 +107,9 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+
+  # def profile
+  #   @user = User.find(params[:user_id])
+  # end 
+
 end
