@@ -12,12 +12,41 @@
  *= require_tree .
  */
 
+ @font-face{
+    font-family: "font";
+    src url("/fonts/KGFaithHopeAndLove.ttf");
+ }
+
+.title{
+  max-width: 100%;
+  padding-top: 100px;
+  text-align: center;
+  border-bottom: solid;
+  padding-bottom: 100px;
+  background-color: #676767;
+}
+
+.title h1{
+color: white;
+font-family: font;
+}
+
+.title h2{
+  color: white;
+}
+
+.logo{
+  font-size: 35px;
+}
+
 .nav{
   max-width: 100%;
-  background-color: grey;
+  background-color: white;
   position: center;
-  font-size: 40px;
-  height: 77px;
+  font-size: 20px;
+  height: 40px;
+  border-bottom: solid;
+  padding-top: 20px;
   /*position: fixed;*/
 }
 
@@ -33,10 +62,11 @@
   }
 
 .login{
+  padding-top: 15px;
+  font-size: 20px;
   float:right;
 }
 
 .body{
   border: black;
-  border: solid;
 }
