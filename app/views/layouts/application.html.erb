@@ -11,6 +11,7 @@
   <div class= "nav">
     <nav>
       <li class="logo">Care Connect</li>
+      <% if current_user %>
       <li><%= link_to "Home", root_path %></li>
       <li><% if current_user %>
           <%= link_to "Profile", user_path(current_user) %></li>
@@ -19,6 +20,7 @@
       <li><%= link_to "Messages", messages_path %></li>
       <li>Search</li>
       <li><%= link_to "Events", events_path %></li>
+      <% end %>
 
       <div class='login'>
       <% if current_user %>
