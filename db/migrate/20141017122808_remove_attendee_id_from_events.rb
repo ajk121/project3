@@ -1,4 +1,4 @@
-class RemoveAttendeeIdFromEvent < ActiveRecord::Migration
+class RemoveAttendeeIdFromEvents < ActiveRecord::Migration
   def up
     remove_column :events, :attendee_id
   end
