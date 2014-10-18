@@ -32,8 +32,12 @@
    <% end %>
  </p>
 
-
-
+<h3>Nearby Events</h3>
+<ul>
+<% for event in @event.nearbys(20) %>
+  <li><%= link_to event.location, event %> </li>
+<% end %>
+</ul>
 
  <%= link_to 'Edit', edit_event_path(@event) %> |
  <%= link_to 'Back', events_path%>
