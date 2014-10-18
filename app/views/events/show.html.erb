@@ -25,6 +25,8 @@
   <%= @event.date %>
 </p>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
+
 <p>
   <b>People Attending:</b><br>
   <% @event.attendees.each do |attendee| %>
@@ -35,7 +37,7 @@
 <h3>Nearby Events</h3>
 <ul>
 <% for event in @event.nearbys(20) %>
-  <li><%= link_to event.location, event %> </li>
+  <li><%= link_to event.location, event %> (<%= event.distance %> miles) </li>
 <% end %>
 </ul>
 

@@ -1,5 +1,15 @@
 <h1>Come along to one of our great events!</h1>
 
+<%= form_tag events_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search For Nearby Events", :name => nil %>
+  </p>
+<% end %>
+
+
+
+
 <div class="eventtable">
 <table>
   <tr>

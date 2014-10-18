@@ -3,13 +3,18 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
 
-    respond_to do |format|
+    if params[:search].present?
+      @event = Event.near(params[:search], 50, :order => :distance)
+    else 
+      @events = Event.all
+
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
     end
   end
+end
 
   # GET /events/1
   # GET /events/1.json
