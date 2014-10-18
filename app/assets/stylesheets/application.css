@@ -12,6 +12,19 @@
  *= require_tree .
  */
 
+ html,body {
+  height: 100%;
+ }
+ #map-canvas 
+ { 
+   height: 350px;
+   width: 80%;
+ }
+
+ #autocomplete { height: 25px; width: 80%;
+
+ }
+
  @font-face{
     font-family: "font";
     src url("/fonts/KGFaithHopeAndLove.ttf");

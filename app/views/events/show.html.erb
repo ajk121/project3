@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"></p>
 
 <p>
   <b>Name:</b>
@@ -22,8 +22,16 @@
    <% end %>
  </p>
 
+<p>
+ <input type="text" id="autocomplete">
+ <button id='locate'>Locate Me!</button>
+ <section id="map-canvas"></section>
+</p>
 
 
  <%= link_to 'Edit', edit_event_path(@event) %> |
  <%= link_to 'Back', events_path %>
  <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
+
+
+ 
