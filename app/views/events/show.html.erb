@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <b>Latitude:</b>
+  <%= @event.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @event.longitude %>
+</p>
+
+<p>
   <b>Date:</b>
   <%= @event.date %>
 </p>
@@ -22,15 +32,11 @@
    <% end %>
  </p>
 
-<p>
- <input type="text" id="autocomplete">
- <button id='locate'>Locate Me!</button>
- <section id="map-canvas"></section>
-</p>
+
 
 
  <%= link_to 'Edit', edit_event_path(@event) %> |
- <%= link_to 'Back', events_path %>
+ <%= link_to 'Back', events_path%>
  <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
 
 
