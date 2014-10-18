@@ -30,20 +30,19 @@
 <p>
   <b>People Attending:</b><br>
   <% @event.attendees.each do |attendee| %>
-    <%= attendee.name %> <br>
-   <% end %>
- </p>
+  <%= link_to attendee.name, attendee %> <br>
+  <% end %>
+</p>
 
 <h3>Nearby Events</h3>
 <ul>
-<% for event in @event.nearbys(20) %>
-  <li><%= link_to event.location, event %> (<%= event.distance %> miles) </li>
-<% end %>
+  <% for event in @event.nearbys(20) %>
+  <li><%= link_to event.location, event %> (<%= event.distance.to_f.round(2) %> miles away) </li>
+  <% end %>
 </ul>
 
- <%= link_to 'Edit', edit_event_path(@event) %> |
- <%= link_to 'Back', events_path%>
- <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path%>
+<%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
 
 
- 
