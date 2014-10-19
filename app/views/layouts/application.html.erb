@@ -13,9 +13,11 @@
 </head>
 <body>
 
-  <div class= "nav">
-    <nav>
-      <li class="logo">Care Connect</li>
+
+  <nav>
+
+    <div class= "nav">
+      <!-- <li class="logo">Care Connect</li> -->
       <% if current_user %>
       <li><%= link_to "Home", root_path %></li>
       <li><% if current_user %>
@@ -46,5 +48,9 @@
       <%= yield %>
     </div>
 
+
+
+
   </body>
+    <footer>&copy; careconnect</footer>
   </html>

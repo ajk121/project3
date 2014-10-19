@@ -1,5 +1,6 @@
 <p id="notice"></p>
 
+<div class="etable">
 <p>
   <b>Name:</b>
   <%= @event.name %>
@@ -8,6 +9,12 @@
 <p>
   <b>Location:</b>
   <%= @event.location %>
+</p>
+
+<p>
+  <b>About Event</b>
+  <br>
+  <%= @event.about_event %>
 </p>
 
 <!-- <p>
@@ -27,6 +34,8 @@
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
 
+
+
 <p>
   <b>People Attending:</b><br>
   <% @event.attendees.each do |attendee| %>
@@ -41,8 +50,12 @@
   <% end %>
 </ul>
 
+<br>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path%>
+<%= link_to 'Back', events_path%> 
+<br><br>
 <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
 
+</div>
 
