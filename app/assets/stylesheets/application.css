@@ -12,13 +12,23 @@
  *= require_tree .
  */
 
+ .homelogo{
+  color: #afeeee;
+  font-size: 60px;
+ }
+
+ @font-face {
+  font-family: faith;
+  src: url(fonts/KGFaithHopeAndLove.ttf)
+ }
+
 
  .title a{
   color: white;
  }
 
 .event a{
-  color: #20bc7e;
+  color: #00008b;
 }
 
 
@@ -57,11 +67,6 @@
 
  }
 
- @font-face{
-    font-family: "font";
-    src url("/fonts/KGFaithHopeAndLove.ttf");
- }
-
 
 .eventtable td {
   border: solid;
@@ -81,6 +86,14 @@
 }
 
 
+.events h2 {
+  color: #afeeee;
+}
+
+.events h1{
+  color: #afeeee;
+}
+
 .events{
   max-width: 100%;
   padding-top: 100px;
@@ -88,7 +101,7 @@
   /*border-bottom: solid;*/
   padding-bottom: 100px;
   background-color: white;
-  color: #FFA300;
+ /* color: #FFA300;*/
   font-family: arial;
 }
 
@@ -96,7 +109,7 @@
   font-size: 35px;
   font-color: white;
   text-decoration: none;
-  color: #20bc7e;
+  color: #00008b;
 }
 
 .title{
@@ -104,62 +117,65 @@
   padding-top: 100px;
   text-align: center;
   padding-bottom: 100px;
-  background-color: #20bc7e;
-  font-family: arial;
+  background-color: #afeeee;
+  font-family: faith;
 
 }
 
-.title h1{
-  font-family: arial;
-  color: #777;;
+/*.title h1{
+  font-family: faith;
+  color: #777;
   text-align: center;
-}
+
+}*/
 
 .title a{
   font-size: 35px;
   text-decoration: none;
-  font-family: arial;
+  font-family: faith;
+  font-style: italic;
+
 }
 
 .title h1{
-color: #FFA300;
-font-family: font;
+color: #00008b;
+font-family: faith;
 }
 
 .title h2{
-  color: #FFA300;
+  color: #00008b;
   font-size: 30px;
 }
 
 .logo{
   font-size: 45px;
   color:#FFA300;
-  font-family: "Source Sans Pro", sans-serif;
+  /*font-family: faith;*/
   text-align: center;
   padding-top: 20px;
   list-style-type: none;
 }
 
-.logo h1 {
-  font-family: sans-serif;
-}
 
 .nav{
-  max-width: 100%;
-  background-color: #f5f4f1;
-  position: center;
-  font-size: 20px;
-  height: 40px;
-  padding-top: 50px;
-  /*color: white;*/
-  padding-bottom: 15px;
-  /*position: fixed;*/
+ position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+   width: 100%;
+   height: 50px;
+   background-color: #00008b;
+   vertical-align: baseline;
+   clear: both;
+   padding-top: 40px;
 }
 
 .nav li{
   display: inline;
   font-size: 40px;
   font-family: sans-serif;
+  padding-left: 15px
 }
 
 .nav a {
@@ -167,15 +183,30 @@ font-family: font;
   text-align: right;
   float: center;  
   font-family: sans-serif;
-  color: #20bc7e;
+  color: #afeeee;
   }
 
 .login{
-  padding-top: 15px;
-  font-size: 20px;
+  font-size: 40px;
   /*padding-left: 10px*/
   float:right;
+  padding-bottom: 20px
 }
+
+/*.login a{
+  font-size: 40px;
+  padding-left: 10px
+  float:right;
+  padding-bottom: 20px*/
+
+
+}
+
+.login b{
+  color: #afeeee;
+  padding-right: 20px;
+}
+
 
 .body{
   border: black;
@@ -224,7 +255,7 @@ font-family: font;
 .location{}
 
 footer{
-  color: #20bc7e;
+  color: #00008b;
   max-width: 100%;
   height: 80px;
   text-align: center;
