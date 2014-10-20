@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :dob, :house, :location, :school, :role, :about_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :dob, :house, :location, :school, :role, :about_me, :profile_image
+
+  mount_uploader :profile_image, ProfileImageUploader
 
   has_many :messages_as_sender, class_name: 'Message', foreign_key: :sender_id, dependent: :destroy 
   has_many :messages_as_receiver, class_name: 'Message', foreign_key: :receiver_id, dependent: :destroy 

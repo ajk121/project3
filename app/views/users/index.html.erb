@@ -4,6 +4,7 @@
 <table>
   <tr>
     <th>User Type</th>
+    <th>Profile Picture</th>
     <th>Name</th>
     <th>House</th>
     <th>Email</th>
@@ -21,6 +22,7 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.role %></td>
+    <td><%= user.profile_image %></td>
     <td><%= user.name %></td>
     <td><%= user.house %></td>
     <td><%= user.email %></td>

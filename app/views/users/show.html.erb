@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="userprofile">
 <div class="username">
+  <p>
+    <b>Image:</b>
+    <%= image_tag @user.profile_image.url %>
+  </p>
 <p>
   <b>Name:</b>
   <%= @user.name %>

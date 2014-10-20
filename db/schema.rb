@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141019182036) do
+ActiveRecord::Schema.define(:version => 20141020071434) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20141019182036) do
     t.string   "last_sign_in_ip"
     t.string   "role"
     t.text     "about_me"
+    t.string   "profile_image"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
