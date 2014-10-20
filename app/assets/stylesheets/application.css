@@ -25,7 +25,7 @@
 
  @font-face {
   font-family: faith;
-  src: url(fonts/KGFaithHopeAndLove.ttf)
+  src: url(KGFaithHopeAndLove.ttf)
  }
 
 
@@ -108,7 +108,7 @@
   padding-bottom: 100px;
   background-color: white;
  /* color: #FFA300;*/
-  font-family: arial;
+  font-family: faith;
 }
 
 .events a {
@@ -180,7 +180,7 @@ font-family: faith;
 .nav li{
   display: inline;
   font-size: 40px;
-  font-family: sans-serif;
+  font-family: faith;
   padding-left: 15px
 }
 
@@ -188,7 +188,7 @@ font-family: faith;
   text-decoration: none;
   text-align: right;
   float: center;  
-  font-family: sans-serif;
+  font-family: faith;
   color: #afeeee;
   }
 
@@ -218,9 +218,18 @@ font-family: faith;
   border: black;
 }
 
+
+.profileimage{height: 100px;
+  background-color:white;
+  width: 100%; 
+  padding-top: 50px;
+  text-align: center;
+
+}
+
 .username{
   height: 100px;
-  background-color:#20bc7e;
+  background-color:#afeeee;
   width: 100%; 
   padding-top: 50px;
   text-align: center;
@@ -236,7 +245,7 @@ font-family: faith;
 
 .email{
   height: 100px;
-  background-color:#20bc7e;
+  background-color:#afeeee;
   width: 100%; 
   padding-top: 50px;
   text-align: center;
@@ -252,13 +261,30 @@ font-family: faith;
 
 .school{
   height: 100px;
-  background-color:#20bc7e;
+  background-color:#afeeee;
   width: 100%; 
   padding-top: 50px;
   text-align: center;
 }
 
-.location{}
+.location{height: 100px;
+  background-color:white;
+  width: 100%; 
+  padding-top: 50px;
+  text-align: center;}
+
+
+.dob{height: 100px;
+  background-color:#afeeee;
+  width: 100%; 
+  padding-top: 50px;
+  text-align: center;}
+
+.aboutme{height: 100px;
+  background-color:white;
+  width: 100%; 
+  padding-top: 50px;
+  text-align: center;}
 
 footer{
   color: #00008b;
@@ -271,7 +297,7 @@ footer{
   }
 
 .userprofile {
-  font-family: sans-serif;
+  font-family: faith;
 }
 
 .activity {

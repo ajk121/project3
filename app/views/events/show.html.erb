@@ -59,6 +59,23 @@
 
 </div>
 
+  <p>
+    <strong>Comments :</strong><br>
+    <% @event.comments.each do |comment| %>
+    <%= render comment %><br>
+    <% end %>
+  </p>
+
+  <% if can? :create, Comment %>
+  <%= form_for Comment.new do |f| %>
+  <%= hidden_field_tag :event_id, @event.id %>
+  <p> <%= f.label :comment, 'Add your comments below' %> : </p>
+  
+  <%= f.text_area :comment %>
+  <%= f.submit %>
+  <% end %>
+<% end %>
+</div>
 
 
 

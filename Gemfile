@@ -18,7 +18,7 @@ gem 'pg'
 
 gem 'cancancan', '~> 1.9'
 gem 'geocoder'
-gem 'acts_as_commentable_with_threading', '1.2.0'
+gem 'acts_as_commentable', '3.0.1'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
 

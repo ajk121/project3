@@ -1,61 +1,70 @@
 <p id="notice"><%= notice %></p>
+
+
 <div class="userprofile">
-<div class="username">
-  <p>
-    <b>Image:</b>
-    <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
-  </p>
-<!--   <%= image_tag @user.profile_image.url %> -->
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-</div>
+  <div class="profileimage">
+    <p>
+      <b>Image:</b>
+      <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
+    </p>
+    <!--   <%= image_tag @user.profile_image.url %> -->
+  </div>
 
-<div class="house">
-<p>
-  <b>House:</b>
-  <%= @user.house %>
-</p>
-</div>
+  <div class="username">  
+    <p>
+      <b>Name:</b>
+      <%= @user.name %>
+    </p>
+  </div>
 
-<div class="email">
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-</div>
+  <div class="house">
+    <p>
+      <b>House:</b>
+      <%= @user.house %>
+    </p>
+  </div>
 
-<div class="password">
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-</div>
+  <div class="email">
+    <p>
+      <b>Email:</b>
+      <%= @user.email %>
+    </p>
+  </div>
 
-<div class="school">
-<p>
-  <b>School:</b>
-  <%= @user.school %>
-</p>
-</div>
+  <div class="password">
+    <p>
+      <b>Password:</b>
+      <%= @user.password %>
+    </p>
+  </div>
 
-<div class="location">
-<p>
-  <b>Location:</b>
-  <%= @user.location %>
-</p>
-</div>
+  <div class="school">
+    <p>
+      <b>School:</b>
+      <%= @user.school %>
+    </p>
+  </div>
 
-<p>
-  <b>Dob:</b>
-  <%= @user.dob %>
-</p>
+  <div class="location">
+    <p>
+      <b>Location:</b>
+      <%= @user.location %>
+    </p>
+  </div>
 
-<p>
-  <b>About Me:</b>
-  <%= @user.about_me %>
-</p>
+  <div class="dob">
+    <p>
+      <b>Dob:</b>
+      <%= @user.dob %>
+    </p>
+  </div>
+
+  <div class="aboutme">
+    <p>
+      <b>About Me:</b>
+      <%= @user.about_me %>
+    </p>
+  </div>
 
 </div>
 

@@ -9,6 +9,7 @@ CareConnect::Application.routes.draw do
   resources :activities
   resources :events
   resources :messages
+  resources :comments
   resources :attendances, only: [:create, :destroy]
   resources :users do 
     put 'approve'
