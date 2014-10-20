@@ -20,6 +20,8 @@ gem 'cancancan', '~> 1.9'
 gem 'geocoder'
 gem 'acts_as_commentable_with_threading', '1.2.0'
 gem 'carrierwave', '0.9.0'
+gem 'rmagick'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

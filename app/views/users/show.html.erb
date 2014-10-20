@@ -3,8 +3,9 @@
 <div class="username">
   <p>
     <b>Image:</b>
-    <%= image_tag @user.profile_image.url %>
+    <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
   </p>
+<!--   <%= image_tag @user.profile_image.url %> -->
 <p>
   <b>Name:</b>
   <%= @user.name %>
