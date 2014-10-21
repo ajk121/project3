@@ -1,6 +1,8 @@
 var myMap = myMap || {} ;
 
 myMap.initialize = function(){
+  myMap.events = $([]);
+
 
 //simple map:
 var mapOptions = {
@@ -20,34 +22,52 @@ var mapOptions = {
 
 //marker;
 
-var markerOptions = {
-  position: new google.maps.LatLng(51.522581, -0.109446),
-  map: map
-}
+$.get('/events.json').success(function(eventsData) {
+  $events = $(eventsData);
+  $events.each(function(index, event) {
+    var markerOptions = {
+      position: new google.maps.LatLng(event.latitude, event.longitude),
+      map: map
+    }
+    var marker = new google.maps.Marker(markerOptions);
 
-var marker = new google.maps.Marker(markerOptions);
+    var infoWindowOptions = {
+      content: 'We are here!'
+    };
+
+    var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+
+    google.maps.event.addListener(marker, 'click', function(){
+      infoWindow.open(map, marker);
+
+    });
+
+  });
+})
+
+
+
+myMap.markers = [];
+myMap.events.each(function(index, anevent) {
+  var ev = new google.maps.Marker({
+    position: new google.maps.LatLng(anevent.latitude, anevent.longitude),
+    map: map
+  });
+  myMap.markers.push(ev);
+})
 
 //marker.setMap(map);
 //reposition - point
-setTimeout(function(){
-  map.setCenter(marker.getPosition())},5000);
+// setTimeout(function(){
+//   map.setCenter(marker.getPosition())},5000);
 
 // map.center = marker.getPosition()
-// map.setCenter(marker.getPosition());
+// map.setCenter(marker.getPosition());#
 
 
 //infowindow
 
-var infoWindowOptions = {
-  content: 'We are here!'
-};
 
-var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-
-google.maps.event.addListener(marker, 'click', function(){
-  infoWindow.open(map, marker);
-
-});
 
 var autocomplete = new google.maps.places.Autocomplete($('#autocomplete')[0]);
 autocomplete.bindTo('bounds', map);

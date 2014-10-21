@@ -120,6 +120,7 @@
 
 .title{
   max-width: 100%;
+  min-height: 400px;
   padding-top: 100px;
   text-align: center;
   padding-bottom: 100px;
@@ -128,6 +129,7 @@
   background-image: url(http://magazinemv.com/wp-content/uploads/2014/02/paper-people-chain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0 50%;
 
 }
 
@@ -174,12 +176,10 @@ font-family: faith;
    z-index: 9999;
    width: 100%;
    height: 50px;
-   background-color: white;
+   background-color: orange;
    vertical-align: baseline;
    clear: both;
    padding-top: 40px;
-
-
 }
 
 .nav li{
@@ -201,23 +201,14 @@ font-family: faith;
   font-size: 40px;
   /*padding-left: 10px*/
   float:right;
-  padding-bottom: 20px
-}
-
-/*.login a{
-  font-size: 40px;
-  padding-left: 10px
-  float:right;
-  padding-bottom: 20px*/
-
-
+  padding-bottom: 20px;
+  font-family: faith;
 }
 
 .login b{
   color: #afeeee;
-  padding-right: 20px;
-  font-family: faith;
 }
+
 
 
 .body{
