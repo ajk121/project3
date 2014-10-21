@@ -7,6 +7,11 @@ class Ability
       can :manage, :all
     elsif user.role == 'approved'
       can :read, Event
+      can :show, User
+      if user.persisted?
+       can :create, Comment 
+       can :update, Comment, user_id: user.id
+      end
 
 
     #elsif user.role? == 'declinded'

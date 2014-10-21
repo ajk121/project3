@@ -25,7 +25,7 @@
 
  @font-face {
   font-family: faith;
-  src: url(KGFaithHopeAndLove.ttf)
+  src: url(Existence-StencilLight.otf)
  }
 
 
@@ -66,7 +66,7 @@
  #map-canvas 
  { 
    height: 350px;
-   width: 80%;
+   width: 100%;
  }
 
  #autocomplete { height: 25px; width: 80%;
@@ -123,8 +123,11 @@
   padding-top: 100px;
   text-align: center;
   padding-bottom: 100px;
-  background-color: #afeeee;
+  background-color: #f0ffff;
   font-family: faith;
+  background-image: url(http://magazinemv.com/wp-content/uploads/2014/02/paper-people-chain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -171,10 +174,12 @@ font-family: faith;
    z-index: 9999;
    width: 100%;
    height: 50px;
-   background-color: #00008b;
+   background-color: white;
    vertical-align: baseline;
    clear: both;
    padding-top: 40px;
+
+
 }
 
 .nav li{
@@ -211,6 +216,7 @@ font-family: faith;
 .login b{
   color: #afeeee;
   padding-right: 20px;
+  font-family: faith;
 }
 
 
@@ -293,6 +299,7 @@ footer{
   text-align: center;
   padding-top: 55px;
   font-size: 25px;
+  font-family: faith;
 
   }
 

@@ -1,21 +1,21 @@
 <p id="notice"></p>
 
 <div class="etable">
-<p>
-  <b>Name:</b>
-  <%= @event.name %>
-</p>
+  <p>
+    <b>Name:</b>
+    <%= @event.name %>
+  </p>
 
-<p>
-  <b>Location:</b>
-  <%= @event.location %>
-</p>
+  <p>
+    <b>Location:</b>
+    <%= @event.location %>
+  </p>
 
-<p>
-  <b>About Event</b>
-  <br>
-  <%= @event.about_event %>
-</p>
+  <p>
+    <b>About Event</b>
+    <br>
+    <%= @event.about_event %>
+  </p>
 
 <!-- <p>
   <b>Latitude:</b>
@@ -51,29 +51,32 @@
 </ul>
 
 <br>
-
+<% if can? :update, @event %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path%> 
+<% end %>
 <br><br>
 <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
 
 </div>
 
-  <p>
-    <strong>Comments :</strong><br>
-    <% @event.comments.each do |comment| %>
-    <%= render comment %><br>
-    <% end %>
-  </p>
-
-  <% if can? :create, Comment %>
-  <%= form_for Comment.new do |f| %>
-  <%= hidden_field_tag :event_id, @event.id %>
-  <p> <%= f.label :comment, 'Add your comments below' %> : </p>
-  
-  <%= f.text_area :comment %>
-  <%= f.submit %>
+<p>
+  <strong>Comments :</strong><br>
+  <% @event.comments.each do |comment| %>
+  <%= render comment %><br>
   <% end %>
+</p>
+
+<% if can? :create, Comment %>
+<%= form_for Comment.new do |f| %>
+<%= hidden_field_tag :event_id, @event.id %>
+<p> <%= f.label :comment, 'Add your comments below' %> : </p>
+
+
+<%= f.text_area :comment %>
+<br>
+<%= f.submit %>
+<% end %>
 <% end %>
 </div>
 

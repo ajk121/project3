@@ -20,12 +20,14 @@
 
     <% @events.each do |event| %>
     <tr>
-      <td><%= event.name %></td>
+      <td class= "elocation"  data-latitude='<%= event.latitude %>,<%= event.longitude %> '><%= event.name %></td>
       <td><%= event.date %></td>
       <td><%= event.location %></td>
       <td><%= link_to 'Show', event %></td>
+      <% if can? :update, @event %>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
 
     </tr>
     <% end %>
@@ -40,4 +42,6 @@
  <section id="map-canvas"></section>
 </p>
 
+<% if can? :update, @event %>
 <%= link_to 'New Event', new_event_path %>
+<% end %>
