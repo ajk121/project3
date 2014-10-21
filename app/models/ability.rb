@@ -8,22 +8,17 @@ class Ability
     elsif user.role == 'approved'
       can :read, Event
       can :show, User
+      can :show, PublicActivity::Activity
       can [:update, :edit], User, id: user.id
       if user.persisted?
        can :create, Comment 
        can :update, Comment, user_id: user.id
      end
    elsif user.role == 'pending'
-      can :show, Home 
-   end 
+    can :show, :home 
+  end 
 
-   # elsif user.role == 'declined'
-
-   #  end 
-
-
-
-
-   
-  end
+# elsif user.role == 'declined'
+#   cannot :manage, :all
+end
 end

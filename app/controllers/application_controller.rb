@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   when current_user.role == "approved"
     redirect_to root_path, alert: "Your account has been approved - We hope you enjoy the site"
   when current_user.role == "pending"
-    redirect_to root_path, alert: "Your registration is being check - We won't be long!"
+    redirect_to root_path, alert: "Your registration is being checked - We won't be long!"
   when current_user.role == "declined"
     redirect_to root_path, alert: "We are very sorry your account has been declined - Please speak to your mentor and ask them to contact us"
   else 
