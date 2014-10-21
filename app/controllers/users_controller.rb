@@ -95,6 +95,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def pending
+    @user = User.find(params[:user_id])
+    @user.role = 'pending'
+    @user.save
+
+    respond_to do |format|
+      format.html { redirect_to users_path }
+      format.json { render json: @user }
+    end
+  end
+
   # PUT /users/1/decline
   # PUT /users/1/decline.json
   def decline
