@@ -40,11 +40,11 @@
 
     &[type=checkbox] {
       display: none; 
-    }
+    } 
   }
 }
 
-.map{
+.map {
   max-width: 100%;
   text-align: center;
   border: solid;
@@ -59,9 +59,10 @@
   p {
     color: red;
     font-weight: bold;
+    font-size: 25px;
   }
 
-  &:hover{
+  &:hover {
     background-color: white;
   }
 
@@ -85,3 +86,91 @@
 
 }
 
+.people-attending {
+  max-width: 100%;
+  text-align: center;
+  border: solid;
+  border-color: white;
+  max-height: 100%;
+
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  #attendee{
+    font-family: faith;
+      display: block;
+      margin: auto;
+      width:150px;
+      height: 35px;
+      border-bottom: 5px solid rgba(192, 57, 43,1.0);
+      background: white;
+      border: none;
+      border-radius: 5px;
+      color: rgba(255,255,255,1);
+      font-size: .75em;
+      font-weight: 100;
+      transition: all ease-in-out .2s;
+      &:hover {
+        background: rgba(192, 57, 43,1.0);
+      }
+      a{
+        text-decoration: none;
+      }
+  }  
+  p {
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  &:hover {
+    background-color: white;
+  }
+}
+
+.nearby-events {
+  max-width: 100%;
+  text-align: center;
+  border: solid;
+  border-color: white;
+  max-height: 100%;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  p {
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  &:hover {
+    background-color: white;
+  }
+}
+
+
+#nearby-events{
+  font-family: faith;
+    // display: block;
+    margin: auto;
+    
+    height: 25px;
+    border-bottom: 5px solid rgba(192, 57, 43,1.0);
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255,255,255,1);
+    font-size: .75em;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+    &:hover {
+      background: rgba(192, 57, 43,1.0);
+    }
+    a{
+      text-decoration: none;
+    }
+
+
+
+}

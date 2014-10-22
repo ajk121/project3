@@ -1,6 +1,10 @@
 <p id="notice"></p>
 
-<h1 id="eventname">Event - <%= @event.name %></h1>
+<h1 id="eventname">Event - <%= @event.name %>
+  <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
+</h1>
+
+
 
 <div class="showevent">
   <p>
@@ -43,19 +47,28 @@
   
 </div>
 
-<p>
-  <b>People Attending:</b><br>
+<div class="people-attending">
+  <p>
+    <b>People Attending</b>
+  </p>
+  <br>
   <% @event.attendees.each do |attendee| %>
-  <%= link_to attendee.name, attendee %> <br>
+  <button id="attendee"><%= link_to attendee.name, attendee %></button><br>
   <% end %>
-</p>
 
-<h3>Nearby Events</h3>
-<ul>
-  <% for event in @event.nearbys(20) %>
-  <li><%= link_to event.location, event %> (<%= event.distance.to_f.round(2) %> miles away) </li>
-  <% end %>
-</ul>
+</div>
+
+<div class="nearby-events">
+  <p>
+    <b>Other Nearby Events</b>
+  </p>
+  <br>
+  <ul>
+    <% for event in @event.nearbys(20) %>
+    <p><button id="nearby-events"><%= link_to event.location, event %></button> - (<%= event.distance.to_f.round(2) %> miles away) </p><br>
+    <% end %>
+  </ul>
+</div>
 
 <br>
 <% if can? :update, @event %>
@@ -63,8 +76,6 @@
 <%= link_to 'Back', events_path%> 
 <% end %>
 <br><br>
-<%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
-
 </div>
 
 <p>

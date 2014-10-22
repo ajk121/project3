@@ -1,7 +1,6 @@
 var myMap = myMap || {} ;
 
 myMap.initialize = function(){
-  // myMap.events = $([]);
 
 
 //simple map:
@@ -18,7 +17,6 @@ var mapOptions = {
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
 //marker;
-
 $.get('/events.json').success(function(eventsData) {
   $events = $(eventsData);
   $events.each(function(index, event) {
