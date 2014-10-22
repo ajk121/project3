@@ -1,11 +1,12 @@
 <p id="notice"></p>
 
-<h1 id="eventname">Event - <%= @event.name %>
-  <%= button_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
-</h1>
+<h1 id="eventname">Event - <%= @event.name %></h1>
 
-
-
+<p>
+  <button id="attend"><%= link_to 'Attend', attendances_path(event_id: @event.id), method: :post %>
+  </button>
+</p>
+<br>
 <div class="showevent">
   <p>
     <b>Event Name</b>
@@ -71,31 +72,33 @@
 </div>
 
 <br>
-<% if can? :update, @event %>
-<button id="event-edit-back"><%= link_to 'Edit', edit_event_path(@event) %></button> 
+<div class="edit-back">
+  <% if can? :update, @event %>
+  <button id="event-edit-back"><%= link_to 'Edit', edit_event_path(@event) %></button> 
   <button id="event-edit-back"><%= link_to 'Back', events_path%> </button>
-<% end %>
-<br><br>
+  <% end %>
+  <br><br>
 </div>
 
-<p>
-  <strong>Comments :</strong><br>
-  <% @event.comments.each do |comment| %>
-  <%= render comment %><br>
+<div class="comments">
+  <p>
+    <h1>Comments </h1><br>
+    <% @event.comments.each do |comment| %>
+    <%= render comment %><br>
+    <% end %>
+  </p>
+
+  <% if can? :create, Comment %>
+  <%= form_for Comment.new do |f| %>
+  <%= hidden_field_tag :event_id, @event.id %>
+  <p> <%= f.label :comment, 'Please add your comments below' %> </p>
+  <br>
+  
+  <%= f.text_area :comment %>
+  <br>
+  <%= f.submit %>
   <% end %>
-</p>
-
-<% if can? :create, Comment %>
-<%= form_for Comment.new do |f| %>
-<%= hidden_field_tag :event_id, @event.id %>
-<p> <%= f.label :comment, 'Add your comments below' %> : </p>
-
-
-<%= f.text_area :comment %>
-<br>
-<%= f.submit %>
-<% end %>
-<% end %>
+  <% end %>
 </div>
 
 

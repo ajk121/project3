@@ -1,3 +1,25 @@
+#attend{
+  font-family: faith;
+  display: block;
+  margin: auto;
+  width:150px;
+  height: 35px;
+  border-bottom: 5px solid rgba(192, 57, 43,1.0);
+  background: white;
+  border: none;
+  border-radius: 5px;
+  color: rgba(255,255,255,1);
+  font-size: .75em;
+  font-weight: 100;
+  transition: all ease-in-out .2s;
+  &:hover {
+    background: rgba(192, 57, 43,1.0);
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
 
 #eventname{
   font-family: faith;
@@ -13,7 +35,7 @@
   width: 350px;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 
   p{
     font-weight: bold;
@@ -100,24 +122,24 @@
 
   #attendee{
     font-family: faith;
-      display: block;
-      margin: auto;
-      width:150px;
-      height: 35px;
-      border-bottom: 5px solid rgba(192, 57, 43,1.0);
-      background: white;
-      border: none;
-      border-radius: 5px;
-      color: rgba(255,255,255,1);
-      font-size: .75em;
-      font-weight: 100;
-      transition: all ease-in-out .2s;
-      &:hover {
-        background: rgba(192, 57, 43,1.0);
-      }
-      a{
-        text-decoration: none;
-      }
+    display: block;
+    margin: auto;
+    width:150px;
+    height: 35px;
+    border-bottom: 5px solid rgba(192, 57, 43,1.0);
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255,255,255,1);
+    font-size: .75em;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+    &:hover {
+      background: rgba(192, 57, 43,1.0);
+    }
+    a{
+      text-decoration: none;
+    }
   }  
   p {
     color: red;
@@ -170,11 +192,15 @@
     a{
       text-decoration: none;
     }
-}
+  }
 
 
-#event-edit-back{
-  font-family: faith;
+  .edit-back{
+    padding-left: 330px
+  }
+
+  #event-edit-back{
+    font-family: faith;
     // display: block;
     margin: auto;
     width: 150px;
@@ -194,4 +220,73 @@
       text-decoration: none;
     }
 
-}
+  }
+
+  .show-buttons{
+
+  }
+
+  .editing-event{
+    h1{
+      font-family: faith;
+    }
+
+    #edit-show-back {
+      font-family: faith;
+      margin: auto;
+      width:150px;
+      height: 35px;
+      border-bottom: 5px solid rgba(192, 57, 43,1.0);
+      background: white;
+      border: none;
+      border-radius: 5px;
+      color: #0C9BE8;
+      font-size: .75em;
+      font-weight: 100;
+      transition: all ease-in-out .2s;
+      &:hover {
+        background: rgba(192, 57, 43,1.0);
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  .field {
+
+    input {
+      font-family: faith;
+      margin: auto;
+      width:150px;
+      height: 35px;
+      border-bottom: 5px solid rgba(192, 57, 43,1.0);
+      background: white;
+      border: none;
+      border-radius: 5px;
+      color: #0C9BE8;
+      font-size: .75em;
+      font-weight: 100;
+      transition: all ease-in-out .2s;
+      &:hover {
+        background: rgba(192, 57, 43,1.0);
+      }
+      a {
+        text-decoration: none;
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+

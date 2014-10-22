@@ -1,6 +1,9 @@
+<div class="editing-event">
 <h1>Editing event</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<div class="show-buttons">
+<button id="edit-show-back"><%= link_to 'Show', @event %></button>
+<button id="edit-show-back"><%= link_to 'Back', events_path %></button>
+</div>

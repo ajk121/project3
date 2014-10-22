@@ -1,15 +1,16 @@
-<%= comment.comment %><br>
-<%= comment.user.name if comment.user.present? %>
 
-<i>This comment was created <%= time_ago_in_words(comment.created_at) %></i>
+<h2><%= comment.comment %></h2>
+<h6><%= comment.user.name if comment.user.present? %>
+
+created this comment <%= time_ago_in_words(comment.created_at) %></h6>
 
 <div class='commentsdelete'>
   <% if can? :destroy, @comment %>
-  <%= link_to 'delete', comment_path(comment), method: :delete, confirm: 'Are you sure you would like to delete this recipe?' %>
+  <button id="comments-button"><%= link_to 'delete', comment_path(comment), method: :delete, confirm: 'Are you sure you would like to delete this recipe?' %></button>
   <% end %>
 
   <% if can? :update, @comment %>
-  <%= link_to 'edit', edit_comment_path(comment) %>
+  <button id="comments-button"><%= link_to 'edit', edit_comment_path(comment) %></button>
   <% end %>
 </div>
 
