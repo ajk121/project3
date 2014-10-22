@@ -1,5 +1,7 @@
 
-
+#eventname{
+  font-family: faith;
+}
 
 
 .showevent {
@@ -12,6 +14,12 @@
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
+
+  p{
+    font-weight: bold;
+    color: red;
+    font-size: 25px;
+  }
 
   &:hover {
     background-color: white;
@@ -33,8 +41,6 @@
     &[type=checkbox] {
       display: none; 
     }
-
-
   }
 }
 
@@ -45,10 +51,19 @@
   border-color: white;
   max-height: 100%;
 
-  width: 350px;
+  width: 600px;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
+
+  p {
+    color: red;
+    font-weight: bold;
+  }
+
+  &:hover{
+    background-color: white;
+  }
 
   input {
 

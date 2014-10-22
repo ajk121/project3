@@ -13,9 +13,6 @@ var mapOptions = {
   mapTypeControl: false
 };
 
-  // plain js:
-  // var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
   //jquery
   var mapCanvas = $('#map-canvas')[0];
   var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -43,30 +40,6 @@ $.get('/events.json').success(function(eventsData) {
 
   });
 })
-
-
-
-
-
-// $('#locate').on('click', function(){
-//   // console.log('click');
-
-//   if(navigator.geolocation){
-//     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-//   } else {
-//     alert("Your browser doesn't support geolocation");
-//   }
-
-//   function successCallback(position){
-//     console.log(position);
-//       // position.coords.latitude;
-//     }
-
-//     function errorCallback(error){
-//       console.log();
-//     }
-//   });
-
 
 
 }
