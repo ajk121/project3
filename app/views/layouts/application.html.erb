@@ -4,24 +4,31 @@
   <title>CareConnect</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+      <!-- <div class='login'> -->
+        <b>Hello</b> 
+        <% if current_user %>
+        <%= current_user.email %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to "Sign Up", new_user_registration_path %> or 
+        <%= link_to "Sign In", new_user_session_path %>
+        <% end %>
+      </div>
 
-
-  <nav>
-    
-    <div class= "nav">
-      <!-- <img src="http://dartington.org.uk/wp-content/uploads/2012/11/Redesigning-systems-for-children-in-care-e1353527153818-300x224.jpg" style="width:304px;height:228px"> -->
-      <% if current_user %>
-      <li><%= link_to "Home", root_path %></li>
-     <% if current_user %>
-     <li><%= link_to "Events", events_path %></li>
+      <div class= "nav">
+        <!-- <img src="http://dartington.org.uk/wp-content/uploads/2012/11/Redesigning-systems-for-children-in-care-e1353527153818-300x224.jpg" style="width:304px;height:228px"> -->
+        <% if current_user %>
+        <li><%= link_to "Home", root_path %></li>
+        <% if current_user %>
+        <li><%= link_to "Events", events_path %></li>
         <li><%= link_to "Profile", user_path(current_user) %></li>
         <% end %>
         <% if can? :read, @user %>
@@ -29,32 +36,24 @@
         <% end %>
         <!-- <li><%= link_to "Messages", messages_path %></li> -->
         <li><%= link_to "What's New", activities_path %></li>
-        
+
         <% else %>
         <li class="homelogo">Care Connect</li>
         <% end %>
+      </div>
+    </nav>
+  </header>
 
-        <div class='login'>
-          <b>Hello</b> 
-          <% if current_user %>
-          <%= current_user.email %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-          <% else %>
-          <%= link_to "Sign Up", new_user_registration_path %> or 
-          <%= link_to "Sign In", new_user_session_path %>
-          <% end %>
-        </div>
-      </nav>
-    </div>
+  
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-    <div class="body">
-      <%= yield %>
-    </div>
+  <div class="body">
+    <%= yield %>
+  </div>
 
 
-  </body>
-    <footer>&copy; careconnect</footer>
-  </html>
+</body>
+<footer>&copy; careconnect</footer>
+</html>
