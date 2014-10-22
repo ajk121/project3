@@ -72,8 +72,8 @@
 
 <br>
 <% if can? :update, @event %>
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path%> 
+<button id="event-edit-back"><%= link_to 'Edit', edit_event_path(@event) %></button> 
+  <button id="event-edit-back"><%= link_to 'Back', events_path%> </button>
 <% end %>
 <br><br>
 </div>
