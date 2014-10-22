@@ -48,24 +48,24 @@ $.get('/events.json').success(function(eventsData) {
 
 
 
-$('#locate').on('click', function(){
-  // console.log('click');
+// $('#locate').on('click', function(){
+//   // console.log('click');
 
-  if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-  } else {
-    alert("Your browser doesn't support geolocation");
-  }
+//   if(navigator.geolocation){
+//     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+//   } else {
+//     alert("Your browser doesn't support geolocation");
+//   }
 
-  function successCallback(position){
-    console.log(position);
-      // position.coords.latitude;
-    }
+//   function successCallback(position){
+//     console.log(position);
+//       // position.coords.latitude;
+//     }
 
-    function errorCallback(error){
-      console.log();
-    }
-  });
+//     function errorCallback(error){
+//       console.log();
+//     }
+//   });
 
 
 

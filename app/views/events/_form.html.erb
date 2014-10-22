@@ -19,10 +19,6 @@
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
-  <div class="field">
-    <%= f.label :about_event %><br />
-    <%= f.text_area :about_event %>
-  </div>
     <div class="field">
       <%= f.label :latitude %><br />
       <%= f.text_field :latitude %>
@@ -35,8 +31,11 @@
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
-  <br>
-  <div class="actions">
+  <div class="field">
+    <%= f.label :about_event %><br />
+    <%= f.text_area :about_event %>
     <%= f.submit %>
   </div>
+  <br>
+  
 <% end %>

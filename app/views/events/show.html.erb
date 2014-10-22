@@ -1,38 +1,40 @@
 <p id="notice"></p>
 
-<div class="etable">
+<div class="showevent">
   <p>
     <b>Name:</b>
     <%= @event.name %>
   </p>
+</div>
 
+<div class="showevent">
   <p>
     <b>Location:</b>
     <%= @event.location %>
   </p>
+</div>
 
+<div class="showevent">
   <p>
     <b>About Event</b>
     <br>
     <%= @event.about_event %>
   </p>
+</div>
+<div class="showevent">
+  <p>
+    <b>Date:</b>
+    <%= @event.date %>
+  </p>
+</div>
 
-<!-- <p>
-  <b>Latitude:</b>
-  <%= @event.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @event.longitude %>
-</p> -->
-
-<p>
-  <b>Date:</b>
-  <%= @event.date %>
-</p>
-
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
+<div class="map">
+  <p>
+    <b>Event Map</b>
+    <br>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
+  </p>
+</div>
 
 <p>
   <b>People Attending:</b><br>
