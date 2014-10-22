@@ -32,7 +32,7 @@ $.get('/events.json').success(function(eventsData) {
     var marker = new google.maps.Marker(markerOptions);
 
     var infoWindowOptions = {
-      content: 'We are here!'     }
+      content: 'We are here! '+event.name+' '+event.date     }
 
     var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
 

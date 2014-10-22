@@ -1,44 +1,37 @@
-<div class="eventsindex">
-  <h1>Come along to one of our great events!</h1>
+  <h1 id="heading">Come along to one of our great events!</h1>
 
-  <div class="eventtable">
-    <table id="eventtable1">
-      <tr>
-        <th>Name</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th></th>
-        <th></th>
-        <th></th>
-
-      </tr>
-
-      <% @events.each do |event| %>
-      <tr>
-        <td class= "elocation"  data-latitude='<%= event.latitude %>,<%= event.longitude %> '><%= event.name %></td>
-        <td><%= event.date %></td>
-        <td><%= event.location %></td>
-        <td><%= link_to 'Show', event %></td>
-        <% if can? :update, @event %>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </div>
-    </tr>
-    <% end %>
-  </table>
-  <br />
-
-  <p>
- <!-- <input type="text" id="autocomplete">
- <button id='locate'>Event Location</button> -->
- <section id="map-canvas"></section>
-</p>
-<br>
-<br>
-<div class="newevent">
   <% if can? :update, @event %>
-  <%= link_to 'New Event', new_event_path %>
+  <%= link_to 'New Event', new_event_path, class: 'newevent' %>
   <% end %>
-</div>
-</div>
+  
+  <table id="eventtable">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th></th>
+     <% if can? :update, @event %> 
+      <th></th>
+      <th></th>
+    <% end %>
+    </tr>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.date %></td>
+      <td><%= event.location %></td>
+      <td><button id="eventbutton"><%= link_to 'Show', event %></button></td>
+      <% if can? :update, @event %>
+      <td><button id="eventbutton"><%= link_to 'Edit', edit_event_path(event) %></button></td>
+      <td><button id="eventbutton"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+    <br />
+
+    <p>
+     <section id="map-canvas"></section>
+    </p>
+
+   

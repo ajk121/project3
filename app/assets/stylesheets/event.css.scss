@@ -1,0 +1,62 @@
+#heading{
+  font-family: faith;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 500px;
+}
+
+#eventtable {
+  border: solid;
+  border-color: white;
+  text-align: center;
+  padding: 0 10px;
+  // background:  rgba(231, 76, 60,1.0);
+  tr {
+    padding: 0 80px;
+
+    &:hover {
+      background-color: white;
+    }
+    th {
+      padding: 0 40px;  
+    }
+    td {
+      padding: 0 10px;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &:first-child{
+      background: white;
+    }
+  }
+}
+
+#eventbutton {
+  display: block;
+  margin: 20px auto;
+  width: 60px;
+  height: 35px;
+  border-bottom: 5px solid rgba(192, 57, 43,1.0);
+  background: #FFF50D;
+  border: none;
+  border-radius: 5px;
+  color: rgba(255,255,255,1);
+  font-size: .75em;
+  font-weight: 100;
+  transition: all ease-in-out .2s;
+
+  &:hover {
+    background: rgba(192, 57, 43,1.0); 
+  }
+}
+
+.newevent{
+  text-align: center;
+  display: block;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
