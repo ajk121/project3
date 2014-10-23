@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
   puts case 
   when current_user.role == "approved"
-    redirect_to root_path, alert: "Your account has been approved - We hope you enjoy the site"
+    redirect_to root_path, alert: "I'm Sorry You Cannot Access This Page"
   when current_user.role == "pending"
     redirect_to root_path, alert: "Your registration is being checked - We won't be long!"
   when current_user.role == "declined"
