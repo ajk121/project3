@@ -6,13 +6,20 @@ class Event < ActiveRecord::Base
 
   validates :date, :name, :location, :about_event, presence: true, on: :create
   
-  # valitdates :date for all future dates / not able to select previous dates
+  validate :date_future
   
   has_many :attendances
   has_many :attendees, through: :attendances, source: :user
   has_many :comments, :as => :commentable 
 
- geocoded_by :location
+  geocoded_by :location
   after_validation :geocode
+
+
+  private
+
+  def date_future
+    errors.add :base, "Date must be in future" if date.past?
+  end 
 
 end
