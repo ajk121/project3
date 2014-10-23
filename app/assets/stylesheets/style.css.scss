@@ -129,9 +129,39 @@ body {
   }  
 
   footer {
-    max-width: 960px;
-    min-height: 150px;
-    margin: 0 auto;
-  }
+   width: 100%;
+   height: $nav-bar-height;
+   line-height: $nav-bar-height;
+   background-color: $primary-color;
+   border-bottom: 1px solid darken($primary-color, 10%);
 
+   
+    #footer-nav {
+      height: $nav-bar-height;
+      line-height: $nav-bar-height;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,43 @@
+$site-padding: 150px;
+
 section{
 
+
   &.welcome{
-    text-align: center;
-    padding: 50px;
+    max-width: 1300px;
+    max-height: 400px;
+    margin: 0 auto;
+    padding: $site-padding 0;
   }
 
+
   &#introduction{
-    background-color: blue;
+    // background-color: white; 
+    background-size: 1350px 1350px;
+    
+
+    h1 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 80px;
+      font-weight: 300;
+      color: black;
+    }
+    h3 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 50px;
+      color: black;
+      font-weight: 200;
+    }
+
+    h4 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 50px;
+      color: black;
+      font-weight: 200;
+
+    }
   }
+
 
   &#introduction-mission{
     background-color: white;
@@ -17,4 +47,6 @@ section{
     background-color: blue;
   }
 
+
 }
+
