@@ -1,7 +1,7 @@
 <h1 id="heading">Come along to one of our great events!</h1>
 
-<button id="new-event">
-   <% if can? :update, @event %>
+<% if can? :update, @event %>
+<button id="new-event">   
    <%= link_to 'New Event', new_event_path %>
    <% end %>
 </button>
