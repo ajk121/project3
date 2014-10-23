@@ -15,11 +15,11 @@
     <th></th>
     <th></th>
     <th></th>
-    <!-- <th></th>
-    <th></th> -->
   </tr>
 
+
 <% @users.each do |user| %>
+    <% unless user == current_user %>
   <tr>
     <td><%= user.role %></td>
     <td><%= link_to user.name, user %></td>
@@ -28,14 +28,25 @@
     <!-- <td><%= user.school %></td> -->
     <td><%= user.location %></td>
     <td><%= user.dob %></td>
-    <!-- <td><%= link_to 'Show', user %></td> -->
-    <!-- <td><%= link_to 'Edit', edit_user_path(user) %></td> -->
-    <td><button id="eventbutton"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-    <td><button id="eventbutton"><%= (link_to 'Approve', user_approve_path(user), method: :put) unless user == current_user %></button></td>
-    <td><button id="eventbutton"><%= (link_to 'Decline', user_decline_path(user), method: :put) unless user == current_user %></button></td>
-
-
+    
+        <td>
+            <button id="eventbutton">
+                <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </button>
+        </td>
+        <td>
+            <button id="eventbutton">
+                <%= (link_to 'Approve', user_approve_path(user), method: :put) unless user == current_user %>
+            </button>
+        </td>
+        <td>
+            <button id="eventbutton">
+                <%= (link_to 'Decline', user_decline_path(user), method: :put) unless user == current_user %>
+            </button>
+        </td>
+    
   </tr>
+  <% end %>
 <% end %>
 </table>
 </div>

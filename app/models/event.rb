@@ -6,6 +6,7 @@ class Event < ActiveRecord::Base
 
   validates :date, :name, :location, :about_event, presence: true, on: :create
   
+  # valitdates :date for all future dates / not able to select previous dates
   
   has_many :attendances
   has_many :attendees, through: :attendances, source: :user

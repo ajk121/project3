@@ -1,7 +1,9 @@
 Created a comment
 
 <% if activity.trackable %>
-  <%= link_to activity.trackable.comment, activity.trackable %> 
+  <%= activity.trackable.comment %> 
 <% else %>
   which has since been removed
 <% end %>
+
+<%#= link_to activity.trackable.comment, activity.trackable %> 

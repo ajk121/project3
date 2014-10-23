@@ -7,7 +7,7 @@
   background: white;
   border: none;
   border-radius: 5px;
-  color: #0C9BE8;
+  color: white;
   font-size: .75em;
   font-weight: 100;
   transition: all ease-in-out .2s;
@@ -19,11 +19,6 @@
   a {
     text-decoration: none;
   }
-}
-
-
-.createbutton{
-  
 }
 
 #heading{
@@ -105,8 +100,8 @@
       border: 0;
       border-bottom: 1px solid #435160;
       outline: none;
-      color: #6D7781;
-      font-size: 16px;
+      color: black;
+      font-size: 19px;
     }
 
     &[type=checkbox] {
@@ -126,13 +121,14 @@
 }
 
 #eventbackbutton {
+
   font-family: faith;
   display: block;
-  margin: auto;
-  width: 60px;
+  margin: 2% 40% 2%;
+  width: 150px;
   height: 35px;
   border-bottom: 5px solid rgba(192, 57, 43,1.0);
-  background: #FFF50D;
+  background: white;
   border: none;
   border-radius: 5px;
   color: rgba(255,255,255,1);

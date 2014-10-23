@@ -31,6 +31,7 @@ end
   # GET /events/new.json
   def new
     @event = Event.new
+    @current_year = Date.current.year
 
     respond_to do |format|
       format.html # new.html.erb
