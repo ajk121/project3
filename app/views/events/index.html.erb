@@ -1,37 +1,41 @@
   <h1 id="heading">Come along to one of our great events!</h1>
 
+  <p>
+   <section id="map-canvas"></section>
+ </p>
+
+ <section id="new-event">
   <% if can? :update, @event %>
   <%= link_to 'New Event', new_event_path, class: 'newevent' %>
   <% end %>
-  
-  <table id="eventtable">
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Location</th>
-      <th></th>
-     <% if can? :update, @event %> 
-      <th></th>
-      <th></th>
+</section>
+
+<table id="eventtable">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th></th>
+    <% if can? :update, @event %> 
+    <th></th>
+    <th></th>
     <% end %>
-    </tr>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.date %></td>
-      <td><%= event.location %></td>
-      <td><button id="eventbutton"><%= link_to 'Show', event %></button></td>
-      <% if can? :update, @event %>
-      <td><button id="eventbutton"><%= link_to 'Edit', edit_event_path(event) %></button></td>
-      <td><button id="eventbutton"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-        <% end %>
-      </tr>
-      <% end %>
-    </table>
-    <br />
+  </tr>
+  <% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.date %></td>
+    <td><%= event.location %></td>
+    <td><button id="eventbutton"><%= link_to 'Show', event %></button></td>
+    <% if can? :update, @event %>
+    <td><button id="eventbutton"><%= link_to 'Edit', edit_event_path(event) %></button></td>
+    <td><button id="eventbutton"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
+<br />
 
-    <p>
-     <section id="map-canvas"></section>
-    </p>
 
-   
+
+

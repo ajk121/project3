@@ -1,44 +1,73 @@
-.userprofile{
-  display: inline-block;
-  text-align: center;
-  border: solid;
-  border-color: white;
-  max-height: 100%;
-
-  width: 250px; height: 150px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 25px;
-
-  p{
-    font-weight: bold;
-    color: red;
-    font-size: 25px;
-  }
-
-  &:hover {
-    background-color: white;
-  }
+#profile-page{
+  font-family: faith;
+  font-size: 45px;
 }
 
-button{
-  font-family: faith;
-  display: inline-block;
-  margin: auto;
-  width:150px;
-  height: 35px;
-  border-bottom: 5px solid rgba(192, 57, 43,1.0);
-  background: white;
-  border: none;
-  border-radius: 5px;
-  color: rgba(255,255,255,1);
-  font-size: .75em;
-  font-weight: 100;
-  transition: all ease-in-out .2s;
-  &:hover {
-    background: rgba(192, 57, 43,1.0);
+.profile-page{
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-top: 5%;
+
+
+  .userprofile{
+    // display: inline-block;
+    float: left;
+    text-align: center;
+    border: solid;
+    border-color: white;
+    max-height: 100%;
+
+    width: 250px; height: 150px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    p{
+      font-weight: bold;
+      color: red;
+      font-size: 25px;
+
+    }
+
+    &:hover {
+      background-color: white;
+    }
+
+
+
   }
-  a{
-    text-decoration: none;
+
+}
+
+.profile-buttons{
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5%;
+
+  button{
+    font-family: faith;
+    display: inline-block;
+    margin: auto;
+    width:150px;
+    height: 35px;
+    border-bottom: 5px solid rgba(192, 57, 43,1.0);
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255,255,255,1);
+    font-size: .75em;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+    &:hover {
+      background: rgba(192, 57, 43,1.0);
+    }
+    a{
+      text-decoration: none;
+    }
   }
+
 }

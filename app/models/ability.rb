@@ -7,7 +7,7 @@ class Ability
       can :manage, :all
     elsif user.role == 'approved'
       can :read, Event
-      can :show, User
+      can :show, user
       can :show, PublicActivity::Activity
       can [:update, :edit], User, id: user.id
       if user.persisted?

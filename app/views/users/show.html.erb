@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Profile Page</h1>
+<h1 id="profile-page">Profile Page</h1>
 
-<!-- <div class="userprofile"> -->
+<div class="profile-page">
   <div class="userprofile">
     <p>
       <b>Image:</b>
@@ -21,6 +21,13 @@
 
   <div class="userprofile">
     <p>
+      <b>Dob:</b>
+      <%= @user.dob %>
+    </p>
+  </div>
+
+  <div class="userprofile">
+    <p>
       <b>House:</b>
       <%= @user.house %>
     </p>
@@ -30,13 +37,6 @@
     <p>
       <b>Email:</b>
       <%= @user.email %>
-    </p>
-  </div>
-
-  <div class="userprofile">
-    <p>
-      <b>Password:</b>
-      <%= @user.password %>
     </p>
   </div>
 
@@ -54,12 +54,7 @@
     </p>
   </div>
 
-  <div class="userprofile">
-    <p>
-      <b>Dob:</b>
-      <%= @user.dob %>
-    </p>
-  </div>
+  
 
   <div class="userprofile">
     <p>
@@ -67,12 +62,13 @@
       <%= @user.about_me %>
     </p>
   </div>
-
 </div>
 
 
+<div class="profile-buttons">
 <p>
 <button><%= link_to 'Edit', edit_user_path(@user) %> </button>
 <button> <%= link_to 'Back', users_path %> </button>
 </p>
+</div>
 
