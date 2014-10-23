@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :dob, :house, :location, :school, :role, :about_me, :profile_image
 
+  validates :name, :location, :house, :school, :email, :password, :password_confirmation, presence: true, on: :create
+  
+
   mount_uploader :profile_image, ProfileImageUploader
 
   has_many :messages_as_sender, class_name: 'Message', foreign_key: :sender_id, dependent: :destroy 

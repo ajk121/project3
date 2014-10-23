@@ -4,11 +4,9 @@
 <table>
   <tr>
     <th>User Type</th>
-    <th>Profile Picture</th>
     <th>Name</th>
     <th>House</th>
     <th>Email</th>
-    <th>Password</th>
     <th>School</th>
     <th>Location</th>
     <th>Dob</th>
@@ -22,11 +20,9 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.role %></td>
-    <td><%= user.profile_image %></td>
     <td><%= user.name %></td>
     <td><%= user.house %></td>
     <td><%= user.email %></td>
-    <td><%= user.password %></td>
     <td><%= user.school %></td>
     <td><%= user.location %></td>
     <td><%= user.dob %></td>

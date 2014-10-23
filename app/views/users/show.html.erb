@@ -1,64 +1,67 @@
 <p id="notice"><%= notice %></p>
 
-<div class="userprofile">
-  <div class="profileimage">
+<h1>Profile Page</h1>
+
+<!-- <div class="userprofile"> -->
+  <div class="userprofile">
     <p>
       <b>Image:</b>
+    </p>
       <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
     </p>
     <!--   <%= image_tag @user.profile_image.url %> -->
   </div>
 
-  <div class="username">  
+  <div class="userprofile">  
     <p>
       <b>Name:</b>
-      <%= @user.name %>
     </p>
+      <%= @user.name %>
   </div>
 
-  <div class="house">
+  <div class="userprofile">
     <p>
       <b>House:</b>
       <%= @user.house %>
     </p>
   </div>
 
-  <div class="email">
+  <div class="userprofile">
     <p>
       <b>Email:</b>
       <%= @user.email %>
     </p>
   </div>
 
-  <div class="password">
+  <div class="userprofile">
     <p>
       <b>Password:</b>
       <%= @user.password %>
     </p>
   </div>
 
-  <div class="school">
+  <div class="userprofile">
     <p>
       <b>School:</b>
       <%= @user.school %>
     </p>
   </div>
 
-  <div class="location">
+  <div class="userprofile">
     <p>
       <b>Location:</b>
       <%= @user.location %>
     </p>
   </div>
 
-  <div class="dob">
+  <div class="userprofile">
     <p>
       <b>Dob:</b>
       <%= @user.dob %>
     </p>
   </div>
 
-  <div class="aboutme">
+  <div class="userprofile">
     <p>
       <b>About Me:</b>
       <%= @user.about_me %>
@@ -68,7 +71,8 @@
 </div>
 
 
+<p>
+<button><%= link_to 'Edit', edit_user_path(@user) %> </button>
+<button> <%= link_to 'Back', users_path %> </button>
+</p>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

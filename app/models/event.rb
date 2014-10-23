@@ -3,6 +3,9 @@ class Event < ActiveRecord::Base
   tracked owner: ->(controller, model) { controller && controller.current_user }
 
   attr_accessible :date, :name, :location, :latitude, :longitude, :about_event
+
+  validates :date, :name, :location, :about_event, presence: true, on: :create
+  
   
   has_many :attendances
   has_many :attendees, through: :attendances, source: :user

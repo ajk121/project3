@@ -1,58 +1,58 @@
 .comments{
-    border: solid;
-    border-color: white;
-    text-align: center;
-    padding: 20px 0;
+  border: solid;
+  border-color: white;
+  text-align: center;
+  padding: 20px 0;
 
-    .submit {
-      font-family: faith;
-    }
-    
-    h1 {
-      font-size: 35px;
-      font-family: faith;
-    }
-
-    h2 {
-      font-family: faith;
-      font-size: 20px;
-      color: #c0392b;
-    }
-
-    h6 {
-      font-family: faith;
-      font-size: 14px;
-      font-style: italic;
-    }
-  
-    input{
-      font-family: faith;
-      display: block;
-      margin: auto;
-      width:150px;
-      height: 35px;
-      border-bottom: 5px solid rgba(192, 57, 43,1.0);
-      background: white;
-      border: none;
-      border-radius: 5px;
-      color: #0C9BE8;
-      font-size: .75em;
-      font-weight: 100;
-      transition: all ease-in-out .2s;
-      &:hover {
-        background: rgba(192, 57, 43,1.0);
-      }
-      a{
-        text-decoration: none;
-      }
-    }
-
+  .submit {
+    font-family: faith;
   }
 
+  h1 {
+    font-size: 35px;
+    font-family: faith;
+  }
 
-  .commentsdelete {
+  h2 {
+    font-family: faith;
+    font-size: 20px;
+    color: #c0392b;
+  }
 
-    button{
+  h6 {
+    font-family: faith;
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  input{
+    font-family: faith;
+    display: block;
+    margin: auto;
+    width:150px;
+    height: 35px;
+    border-bottom: 5px solid rgba(192, 57, 43,1.0);
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: #0C9BE8;
+    font-size: .75em;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+    &:hover {
+      background: rgba(192, 57, 43,1.0);
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+.commentsdelete {
+
+  button{
     font-family: faith;
     // display: block;
     margin: auto;
@@ -74,3 +74,50 @@
     } 
   } 
 }
+
+.updateform{
+
+  h1 {
+    font-family: faith; 
+  }
+}
+
+.actions {
+
+  input{
+    font-family: faith;
+      // display: block;
+      margin: auto;
+      width: 150px;
+      height: 25px;
+      border-bottom: 5px solid rgba(192, 57, 43,1.0);
+      background: white;
+      border: none;
+      border-radius: 5px;
+      color: #0C9BE8;
+      font-size: .75em;
+      font-weight: 100;
+      transition: all ease-in-out .2s;
+  &:hover {
+      background: rgba(192, 57, 43,1.0);
+  }
+  a{
+        text-decoration: none;
+  } 
+ }
+}
+
+.commentform1{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
