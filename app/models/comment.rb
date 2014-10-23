@@ -3,6 +3,8 @@ class Comment < ActiveRecord::Base
   tracked owner: ->(controller, model) { controller && controller.current_user }
   attr_accessible :comment
 
+  validates :comment, presence: true, on: :create 
+
   include ActsAsCommentable::Comment
 
   belongs_to :commentable, :polymorphic => true

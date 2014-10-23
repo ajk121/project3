@@ -3,7 +3,7 @@
   border: solid;
   border-color: white;
   text-align: center;
-  padding: 0 10px;
+  // padding: 0 10px;
   // background:  rgba(231, 76, 60,1.0);
   tr {
     padding: 0 80px;
@@ -30,4 +30,28 @@
 #users-table-page {
   font-family: faith;
   padding: 15px 0;
+  font-size: 35px;
 }
+
+#new-user-button {
+    display: block;
+    margin: 3% auto;
+    width: 150px;
+    height: 35px;
+    border-bottom: 5px solid rgba(192, 57, 43,1.0);
+    background: white;
+    border: none;
+    border-radius: 5px;
+    color: #0C9BE8;
+    font-size: .75em;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+
+    &:hover {
+      background: rgba(192, 57, 43,1.0); 
+    }
+
+    a{
+      text-decoration: none;
+    }
+  }

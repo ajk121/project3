@@ -1,14 +1,14 @@
-  <h1 id="heading">Come along to one of our great events!</h1>
+<h1 id="heading">Come along to one of our great events!</h1>
 
-  <p>
+<button id="new-event">
+   <% if can? :update, @event %>
+   <%= link_to 'New Event', new_event_path %>
+   <% end %>
+</button>
+
+<p>
    <section id="map-canvas"></section>
- </p>
-
- <section id="new-event">
-  <% if can? :update, @event %>
-  <%= link_to 'New Event', new_event_path, class: 'newevent' %>
-  <% end %>
-</section>
+</p>
 
 <table id="eventtable">
   <tr>
