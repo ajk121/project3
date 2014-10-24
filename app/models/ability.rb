@@ -5,6 +5,7 @@ class Ability
     user ||= User.new
     if user.role? :admin
       can :manage, :all
+      cannot :read, Message
     elsif user.role == 'approved'
       can :read, Event
       can :show, user
@@ -20,5 +21,5 @@ class Ability
 
 # elsif user.role == 'declined'
 #   cannot :manage, :all
-end
+  end
 end

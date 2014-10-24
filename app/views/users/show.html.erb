@@ -2,21 +2,21 @@
 
 <h1 id="profile-page">Profile Page</h1>
 
+<div class="user-image">
+  <p>
+    <!-- <b>Image</b> -->
+  </p>
+  <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
+</p>
+<!--   <%= image_tag @user.profile_image.url %> -->
+</div>
 <div class="profile-page">
-  <div class="userprofile">
-    <p>
-      <b>Image:</b>
-    </p>
-      <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.detail.url %>
-    </p>
-    <!--   <%= image_tag @user.profile_image.url %> -->
-  </div>
 
   <div class="userprofile">  
     <p>
       <b>Name:</b>
     </p>
-      <%= @user.name %>
+    <%= @user.name %>
   </div>
 
   <div class="userprofile">
@@ -54,9 +54,7 @@
     </p>
   </div>
 
-  
-
-  <div class="userprofile">
+  <div class="about-me">
     <p>
       <b>About Me:</b>
       <%= @user.about_me %>
@@ -66,9 +64,9 @@
 
 
 <div class="profile-buttons">
-<p>
-<button><%= link_to 'Edit', edit_user_path(@user) %> </button>
-<button> <%= link_to 'Back', users_path %> </button>
-</p>
+  <p>
+    <button><%= link_to 'Edit', edit_user_path(@user) %> </button>
+    <button> <%= link_to 'Back', users_path %> </button>
+  </p>
 </div>
 

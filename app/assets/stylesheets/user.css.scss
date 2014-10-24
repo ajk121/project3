@@ -1,3 +1,26 @@
+.user-image{
+  float: left;
+  text-align: center;
+  border: solid;
+  border-color: white;
+  max-height: 100%;
+  width: 250px; height: 150px;
+  margin-left: 37%;
+  padding-top: 60px;
+  padding-bottom: 25px;
+
+  p{
+    font-weight: bold;
+    color: red;
+    font-size: 25px;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+
 #profile-page{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 45px;
@@ -9,6 +32,32 @@
   margin: 0 auto;
   padding-left: 10%;
   padding-top: 5%;
+
+.about-me{
+    float: left;
+    text-align: center;
+    border: solid;
+    border-color: white;
+    max-height: 100%;
+
+    width: 762px; height: 150px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    p{
+      font-weight: bold;
+      color: red;
+      font-size: 25px;
+
+    }
+
+
+    &:hover {
+      background-color: white;
+    }
+
+  }
 
 
   .userprofile{
