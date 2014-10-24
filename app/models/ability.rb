@@ -8,7 +8,7 @@ class Ability
       cannot :read, Message
     elsif user.role == 'approved'
       can :read, Event
-      can :show, user
+      can :show, User
       can :index, PublicActivity::Activity
       can [:update, :edit], User, id: user.id
       if user.persisted?

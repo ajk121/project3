@@ -2,7 +2,8 @@ class AttendancesController < ApplicationController
 
   def create 
     @event = Event.find(params[:event_id])
-    @event.attendances.new(user_id: current_user.id)
+    attendance = @event.attendances.new(user_id: current_user.id)
+    attendance.save
     @event.save
 
     respond_to do |format|
