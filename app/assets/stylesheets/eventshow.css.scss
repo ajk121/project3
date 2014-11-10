@@ -255,12 +255,13 @@
 
 
   .field {
+    padding-left: 5%;
 
     input {
       font-family: faith;
       margin: 5% 20%;
       margin: auto;
-      width:150px;
+      width:300px;
       height: 35px;
       border-bottom: 5px solid rgba(192, 57, 43,1.0);
       background: white;
@@ -275,6 +276,7 @@
       }
       a {
         text-decoration: none;
+        text-align: center;
       }
 
     }

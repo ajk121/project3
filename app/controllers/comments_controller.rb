@@ -10,7 +10,13 @@ def create
   event = Event.find(params[:event_id])
   comment.commentable = event
   comment.save
-  redirect_to :back
+  
+  respond_to do |format|
+      format.html {redirect_to :back, notice: 'comment posted'}
+      format.json {redirect_to :back, notice: 'comment posted'}
+  end
+
+  
 end
 
 def update
